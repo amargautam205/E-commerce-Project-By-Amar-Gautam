@@ -24,7 +24,7 @@ public class ProductService {
         this.productRepository.deleteById(id);
     }
 
-    public Optional<Product> updateById(int id){
+    public Optional<Product> getProductById(int id){
         return this.productRepository.findById(id);
     }
 
