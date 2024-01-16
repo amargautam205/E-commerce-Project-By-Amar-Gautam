@@ -1,9 +1,7 @@
 package com.example.demo.model;
-import jakarta.persistence.*;
-import lombok.*;
+import javax.persistence.*;
 
 @Entity
-@Data
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -12,4 +10,27 @@ public class Category {
 
     private  String name;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Category(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public Category() {
+    }
 }
