@@ -37,8 +37,8 @@ public class GoogleOAuth2SuccessHandler implements AuthenticationSuccessHandler 
         {
             User user =new User();
             user.setFirstName(token.getPrincipal().getAttributes().get("given_name").toString());
-            user.setLastName(token.getPrincipal().getAttributes().get("given_name").toString());
-            user.setEmail(token.getPrincipal().getAttributes().get("given_name").toString());
+            user.setLastName(token.getPrincipal().getAttributes().get("family_name").toString());
+            user.setEmail(token.getPrincipal().getAttributes().get("email").toString());
             List<Role> roles=new ArrayList<>();
             roles.add(roleRepository.findById(2).get());
             user.setRoles(roles);
