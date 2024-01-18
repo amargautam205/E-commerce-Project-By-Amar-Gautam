@@ -11,9 +11,6 @@ public class ProductDTO {
     private String imageName;
     private int categoryId;
 
-    public int getId() {
-        return id;
-    }
 
     public ProductDTO() {
     }
@@ -27,7 +24,9 @@ public class ProductDTO {
         this.imageName = imageName;
         this.categoryId = categoryId;
     }
-
+    public int getId() {
+        return id;
+    }
     public void setId(int id) {
         this.id = id;
     }
